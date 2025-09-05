@@ -5,8 +5,8 @@ set -e
 echo "PTB POC: Transfer Child to Parent"
 
 # You need to manually set these package IDs after running deploy.sh
-CHILD_PACKAGE="0x0bfdb08caa2c1c77a840c4b78f29afd419203e498f6e83e4c8ebaf56a721f26a"
-PARENT_PACKAGE="0x34706e00a71fa0abf48b2a918721d8028b218c97b2f120dd2fade661b507dfcd"
+CHILD_PACKAGE="0xf2c44c07a40a4759c8a416ec43fd8216f08ee40f158b43208e06a560d0f2a03a"
+PARENT_PACKAGE="0x48673a98c17bbe7946fc05f552637875fb4c6fab76fbf2738ddd162434cae8e0"
 
 # Check if package IDs are set
 if [ -z "$CHILD_PACKAGE" ] || [ -z "$PARENT_PACKAGE" ]; then
@@ -56,12 +56,14 @@ iota client ptb \
 --gas-budget 100000000
 
 echo "Getting counter..."
-COUNTER=$(iota client ptb \
+CHANGES=$(iota client ptb \
 --assign child_object_id $CHILD_OBJECT_ID \
 --assign parent_object_id $PARENT_OBJECT_ID \
---move-call $PARENT_PACKAGE::parent::receive_child  parent_object_id child_object_id \
---assign received_object \
---move-call $PARENT_PACKAGE::parent::get_counter parent_object_id received_object \
+--move-call $PARENT_PACKAGE::parent::borrow_child  parent_object_id child_object_id \
+--assign borrowed \
+--move-call $PARENT_PACKAGE::parent::get_counter parent_object_id borrowed.0 \
+--assign COUNTER \
+--move-call $PARENT_PACKAGE::parent::put_back parent_object_id borrowed.0 borrowed.1\
 --gas-budget 100000000)
 
 echo "Counter: $COUNTER"
