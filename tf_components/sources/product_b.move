@@ -1,4 +1,4 @@
-module parent::product_b;
+module tf_components::product_b;
 
 use iota::transfer::Receiving;
 

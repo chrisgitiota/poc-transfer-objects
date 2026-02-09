@@ -13,7 +13,7 @@ dependencies = [
 
 [[move.package]]
 id = "Iota"
-source = { git = "https://github.com/iotaledger/iota.git", rev = "e3c45c9370f14b8137fd1bb9d109d3563d416223", subdir = "crates/iota-framework/packages/iota-framework" }
+source = { git = "https://github.com/iotaledger/iota.git", rev = "4698c6723208e052a00c74602d2c8dc0efffe5de", subdir = "crates/iota-framework/packages/iota-framework" }
 
 dependencies = [
   { id = "MoveStdlib", name = "MoveStdlib" },
@@ -21,7 +21,7 @@ dependencies = [
 
 [[move.package]]
 id = "IotaSystem"
-source = { git = "https://github.com/iotaledger/iota.git", rev = "e3c45c9370f14b8137fd1bb9d109d3563d416223", subdir = "crates/iota-framework/packages/iota-system" }
+source = { git = "https://github.com/iotaledger/iota.git", rev = "4698c6723208e052a00c74602d2c8dc0efffe5de", subdir = "crates/iota-framework/packages/iota-system" }
 
 dependencies = [
   { id = "Iota", name = "Iota" },
@@ -30,11 +30,11 @@ dependencies = [
 
 [[move.package]]
 id = "MoveStdlib"
-source = { git = "https://github.com/iotaledger/iota.git", rev = "e3c45c9370f14b8137fd1bb9d109d3563d416223", subdir = "crates/iota-framework/packages/move-stdlib" }
+source = { git = "https://github.com/iotaledger/iota.git", rev = "4698c6723208e052a00c74602d2c8dc0efffe5de", subdir = "crates/iota-framework/packages/move-stdlib" }
 
 [[move.package]]
 id = "Stardust"
-source = { git = "https://github.com/iotaledger/iota.git", rev = "e3c45c9370f14b8137fd1bb9d109d3563d416223", subdir = "crates/iota-framework/packages/stardust" }
+source = { git = "https://github.com/iotaledger/iota.git", rev = "4698c6723208e052a00c74602d2c8dc0efffe5de", subdir = "crates/iota-framework/packages/stardust" }
 
 dependencies = [
   { id = "Iota", name = "Iota" },
@@ -42,20 +42,14 @@ dependencies = [
 ]
 
 [move.toolchain-version]
-compiler-version = "1.4.1"
+compiler-version = "1.14.1"
 edition = "2024.beta"
 flavor = "iota"
 
 [env]
 
 [env.localnet]
-chain-id = "bda127a3"
-original-published-id = "0x8272bcf9ea852d40e3bae690c707c27a1dd0735a2579e9c3eeeb43ca8c9424e1"
-latest-published-id = "0x8272bcf9ea852d40e3bae690c707c27a1dd0735a2579e9c3eeeb43ca8c9424e1"
-published-version = "1"
-
-[env.testnet]
-chain-id = "2304aa97"
-original-published-id = "0x0bfdb08caa2c1c77a840c4b78f29afd419203e498f6e83e4c8ebaf56a721f26a"
-latest-published-id = "0x0bfdb08caa2c1c77a840c4b78f29afd419203e498f6e83e4c8ebaf56a721f26a"
+chain-id = "8b0bc6d2"
+original-published-id = "0x5158fbcc5b9fcaa41c7727c9fb9ee061268cab961b62c0f6f88da9e12035666d"
+latest-published-id = "0x5158fbcc5b9fcaa41c7727c9fb9ee061268cab961b62c0f6f88da9e12035666d"
 published-version = "1"

@@ -2,15 +2,14 @@
 
 [move]
 version = 3
-manifest_digest = "58468134FBD3A21E89E20E089F470FC31F97C49A954105A16BDB03C50FE62948"
-deps_digest = "52B406A7A21811BEF51751CF88DA0E76DAEFFEAC888D4F4060B1A72BBE7D8D35"
+manifest_digest = "225B1350AC0DDD7C6FBC1001DF6A9505C11E6DEFE87F0AD084A95266CB7971F1"
+deps_digest = "397E6A9F7A624706DBDFEE056CE88391A15876868FD18A88504DA74EB458D697"
 dependencies = [
   { id = "Iota", name = "Iota" },
   { id = "IotaSystem", name = "IotaSystem" },
   { id = "MoveStdlib", name = "MoveStdlib" },
   { id = "Stardust", name = "Stardust" },
   { id = "child", name = "child" },
-  { id = "tf_components", name = "tf_components" },
 ]
 
 [[move.package]]
@@ -54,18 +53,6 @@ dependencies = [
   { id = "Stardust", name = "Stardust" },
 ]
 
-[[move.package]]
-id = "tf_components"
-source = { local = "../tf_components" }
-
-dependencies = [
-  { id = "Iota", name = "Iota" },
-  { id = "IotaSystem", name = "IotaSystem" },
-  { id = "MoveStdlib", name = "MoveStdlib" },
-  { id = "Stardust", name = "Stardust" },
-  { id = "child", name = "child" },
-]
-
 [move.toolchain-version]
 compiler-version = "1.14.1"
 edition = "2024.beta"
@@ -75,6 +62,6 @@ flavor = "iota"
 
 [env.localnet]
 chain-id = "8b0bc6d2"
-original-published-id = "0x6576cf080cab53d1ed2af0e448777329b4871b0a9ea98b6944e8bbddd65b379f"
-latest-published-id = "0x6576cf080cab53d1ed2af0e448777329b4871b0a9ea98b6944e8bbddd65b379f"
+original-published-id = "0x7d649d91b268cadfe1dc6f7c8c1769d53e448e3fb48cbdc07c76ca5bc0c13b72"
+latest-published-id = "0x7d649d91b268cadfe1dc6f7c8c1769d53e448e3fb48cbdc07c76ca5bc0c13b72"
 published-version = "1"
